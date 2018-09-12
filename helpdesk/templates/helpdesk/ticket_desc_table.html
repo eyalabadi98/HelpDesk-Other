@@ -17,7 +17,7 @@
                                         | <a href="{% url 'helpdesk:delete' ticket.id %}" class="ticket-delete"><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> {% trans "Delete" %}</button></a>
                                         {% if ticket.on_hold %} | <a href="{% url 'helpdesk:unhold' ticket.id %}" class="ticket-hold"><button class="btn btn-warning btn-xs"><i class="fa fa-play"></i> {% trans "Unhold" %}</button></a>{% else %} | <a href="{% url 'helpdesk:hold' ticket.id %}" class="ticket-hold"><button class="btn btn-warning btn-xs"><i class="fa fa-pause"></i> {% trans "Hold" %}</button></a>{% endif %}
                                         </span></td></tr>
-                                    <tr><th colspan='2'>{% blocktrans with ticket.queue as queue %}Queue: {{ queue }}{% endblocktrans %}</th></tr>
+                                    <tr><th colspan='2'>{% blocktrans with ticket.queue as queue %}Type: {{ queue }}{% endblocktrans %}</th></tr>
                                     </thead>
                                     <tbody>
                                         {% for customfield in ticket.ticketcustomfieldvalue_set.all %}
@@ -54,7 +54,7 @@
                                         </tr>
 
                                         <tr>
-                                            <th>{% trans "Submitter E-Mail" %}</th>
+                                            <th>{% trans "Client" %}</th>
                                             <td>{{ ticket.submitter_email }}{% if user.is_superuser %} <strong><a href='{% url 'helpdesk:email_ignore_add' %}?email={{ ticket.submitter_email }}'><button type="button" class="btn btn-warning btn-xs"><i class="fa fa-eye-slash"></i>&nbsp;{% trans "Ignore" %}</button></a></strong>{% endif %}</td>
                                         </tr>
 

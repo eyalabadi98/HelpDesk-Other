@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class HelpdeskConfig(AppConfig):
     name = 'helpdesk'
-    verbose_name = "Helpdesk"
+    verbose_name = "Ticket Managment"

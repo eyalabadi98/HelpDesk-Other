@@ -30,7 +30,7 @@ msgstr ""
 #: templates/helpdesk/ticket_list.html:199 views/staff.py:976
 #: views/staff.py:982 views/staff.py:988
 msgid "Queue"
-msgstr "Cola"
+msgstr "Issue Type"
 
 #: forms.py:122
 msgid "Summary of the problem"
@@ -443,7 +443,7 @@ msgstr "E-mail del solicitante"
 msgid ""
 "The submitter will receive an email for all public follow-ups left for this "
 "task."
-msgstr "El solicitante recibira un e-mail para todas las actualizaciones públicas dejadas para esta tarea."
+msgstr "El email recibira un e-mail para todas las actualizaciones públicas dejadas para esta tarea."
 
 #: models.py:290
 msgid "Assigned to"

@@ -8,15 +8,19 @@ from helpdesk.models import CustomField
 
 @admin.register(Queue)
 class QueueAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'email_address', 'locale')
+    list_display = ('title', 'slug', 'email_address')
     prepopulated_fields = {"slug": ("title",)}
+    print("Printing Queue")
+    logger.debugger("Queue")
 
 
 @admin.register(Ticket)
 class TicketAdmin(admin.ModelAdmin):
-    list_display = ('title', 'status', 'assigned_to', 'queue', 'hidden_submitter_email',)
+    list_display = ('title', 'status', 'assigned_to','title',)
     date_hierarchy = 'created'
-    list_filter = ('queue', 'assigned_to', 'status')
+    print("Ticket Admin")
+    exclude = ('submitter_email')
+    list_filter = ('assigned_to', 'title')
 
     def hidden_submitter_email(self, ticket):
         if ticket.submitter_email:
@@ -26,7 +30,7 @@ class TicketAdmin(admin.ModelAdmin):
             return "%s@%s" % (username, domain)
         else:
             return ticket.submitter_email
-    hidden_submitter_email.short_description = _('Submitter E-Mail')
+    hidden_submitter_email.short_description = _('Ticket Submitter E-Mail')
 
 
 class TicketChangeInline(admin.StackedInline):
@@ -56,7 +60,7 @@ class KBItemAdmin(admin.ModelAdmin):
 
 @admin.register(CustomField)
 class CustomFieldAdmin(admin.ModelAdmin):
-    list_display = ('name', 'label', 'data_type')
+    list_display = ('name', 'name','label', 'data_type')
 
 
 @admin.register(EmailTemplate)

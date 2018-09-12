@@ -28,7 +28,7 @@ msgstr ""
 #: templates/helpdesk/ticket_list.html:225 views/staff.py:1032
 #: views/staff.py:1038 views/staff.py:1044 views/staff.py:1050
 msgid "Queue"
-msgstr ""
+msgstr "Topic"
 
 #: forms.py:137
 msgid "Summary of the problem"
@@ -401,7 +401,7 @@ msgstr ""
 
 #: models.py:257
 msgid "5. Very Low"
-msgstr ""
+msgstr "5. Very Low."
 
 #: models.py:271 templates/helpdesk/dashboard.html:100
 #: templates/helpdesk/ticket_list.html:82
@@ -411,7 +411,7 @@ msgstr ""
 
 #: models.py:273
 msgid "Date this ticket was first created"
-msgstr ""
+msgstr "Date"
 
 #: models.py:277
 msgid "Modified"
@@ -424,7 +424,7 @@ msgstr ""
 #: models.py:283 templates/helpdesk/public_view_ticket.html:18
 #: templates/helpdesk/ticket_desc_table.html:42
 msgid "Submitter E-Mail"
-msgstr ""
+msgstr "Client"
 
 #: models.py:286
 msgid ""
@@ -1604,7 +1604,7 @@ msgstr ""
 #: templates/helpdesk/public_view_ticket.html:9
 #, python-format
 msgid "Queue: %(queue_name)s"
-msgstr ""
+msgstr "Type:"
 
 #: templates/helpdesk/public_view_ticket.html:13
 #: templates/helpdesk/ticket_desc_table.html:32
@@ -1985,7 +1985,7 @@ msgstr ""
 #: templates/helpdesk/ticket_desc_table.html:9
 #, python-format
 msgid "Queue: %(queue)s"
-msgstr ""
+msgstr "Topic: %(queue)s"
 
 #: templates/helpdesk/ticket_desc_table.html:37
 msgid "Assigned To"

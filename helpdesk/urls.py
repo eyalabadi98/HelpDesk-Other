@@ -30,7 +30,7 @@ class DirectTemplateView(TemplateView):
         return context
 
 
-app_name = 'helpdesk'
+app_name = 'Customer Issues'
 
 urlpatterns = [
     url(r'^dashboard/$',

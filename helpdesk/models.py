@@ -269,8 +269,8 @@ class Queue(models.Model):
 
     class Meta:
         ordering = ('title',)
-        verbose_name = _('Queue')
-        verbose_name_plural = _('Queues')
+        verbose_name = _('Topic')
+        verbose_name_plural = _('Topics')
 
     def _from_address(self):
         """
@@ -385,7 +385,7 @@ class Ticket(models.Model):
         (2, _('2. High')),
         (3, _('3. Normal')),
         (4, _('4. Low')),
-        (5, _('5. Very Low')),
+        (5, _('5. Very Low.')),
     )
 
     title = models.CharField(
@@ -393,11 +393,11 @@ class Ticket(models.Model):
         max_length=200,
     )
 
-    queue = models.ForeignKey(
-        Queue,
-        on_delete=models.CASCADE,
-        verbose_name=_('Queue'),
-    )
+    #queue = models.ForeignKey(
+       # Queue,
+      #  on_delete=models.CASCADE,
+     #   verbose_name=_('Queue'),
+    #)
 
     created = models.DateTimeField(
         _('Created'),
@@ -411,12 +411,11 @@ class Ticket(models.Model):
         help_text=_('Date this ticket was most recently changed.'),
     )
 
-    submitter_email = models.EmailField(
-        _('Submitter E-Mail'),
+    submitter_email = models.TextField(
+        _('Client Name'),
         blank=True,
         null=True,
-        help_text=_('The submitter will receive an email for all public '
-                    'follow-ups left for this task.'),
+        help_text=_('Enter the client full name'),
     )
 
     assigned_to = models.ForeignKey(

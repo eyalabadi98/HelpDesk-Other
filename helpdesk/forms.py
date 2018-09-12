@@ -134,12 +134,12 @@ class AbstractTicketForm(CustomFieldMixin, forms.Form):
     Contain all the common code and fields between "TicketForm" and
     "PublicTicketForm". This Form is not intended to be used directly.
     """
-    queue = forms.ChoiceField(
-        widget=forms.Select(attrs={'class': 'form-control'}),
-        label=_('Queue'),
-        required=True,
-        choices=()
-    )
+    #queue = forms.ChoiceField(
+     #   widget=forms.Select(attrs={'class': 'form-control'}),
+      #  label=_('Queue'),
+       # required=True,
+        #choices=()
+    #)
 
     title = forms.CharField(
         max_length=100,
@@ -296,7 +296,7 @@ class TicketForm(AbstractTicketForm):
     """
     submitter_email = forms.EmailField(
         required=False,
-        label=_('Submitter E-Mail Address'),
+        label=_('Client'),
         widget=forms.TextInput(attrs={'class': 'form-control'}),
         help_text=_('This e-mail address will receive copies of all public '
                     'updates to this ticket.'),

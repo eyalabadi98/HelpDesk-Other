@@ -1002,7 +1002,7 @@ def create_ticket(request):
 
     if request.method == 'POST':
         form = TicketForm(request.POST, request.FILES)
-        form.fields['queue'].choices = [('', '--------')] + [
+        form.fields['queue'].choices = [('', '.--------')] + [
             (q.id, q.title) for q in Queue.objects.all()]
         form.fields['assigned_to'].choices = [('', '--------')] + [
             (u.id, u.get_username()) for u in assignable_users]
@@ -1020,7 +1020,7 @@ def create_ticket(request):
             initial_data['queue'] = request.GET['queue']
 
         form = TicketForm(initial=initial_data)
-        form.fields['queue'].choices = [('', '--------')] + [
+        form.fields['queue'].choices = [('', '.--------')] + [
             (q.id, q.title) for q in Queue.objects.all()]
         form.fields['assigned_to'].choices = [('', '--------')] + [
             (u.id, u.get_username()) for u in assignable_users]
