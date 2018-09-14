@@ -401,7 +401,7 @@ msgstr ""
 
 #: models.py:257
 msgid "5. Very Low"
-msgstr "5. Very Low."
+msgstr "5. Very Low"
 
 #: models.py:271 templates/helpdesk/dashboard.html:100
 #: templates/helpdesk/ticket_list.html:82
@@ -411,7 +411,7 @@ msgstr ""
 
 #: models.py:273
 msgid "Date this ticket was first created"
-msgstr "Date"
+msgstr ""
 
 #: models.py:277
 msgid "Modified"
@@ -1089,7 +1089,7 @@ msgid "<a href='https://github.com/rossp/django-helpdesk'>django-helpdesk</a>."
 msgstr ""
 
 #: templates/helpdesk/base.html:10
-msgid "Powered by django-helpdesk"
+msgid ""
 msgstr ""
 
 #: templates/helpdesk/base.html:20 templates/helpdesk/rss_list.html:9
@@ -1108,7 +1108,7 @@ msgstr ""
 
 #: templates/helpdesk/base.html:52 templates/helpdesk/public_base.html:6
 #: templates/helpdesk/public_base.html:18
-msgid "Helpdesk"
+msgid "Patriot Electric - Customer Issues"
 msgstr ""
 
 #: templates/helpdesk/base.html:62 templates/helpdesk/rss_list.html:9
@@ -1190,7 +1190,7 @@ msgid "Submit Ticket"
 msgstr ""
 
 #: templates/helpdesk/dashboard.html:2
-msgid "Helpdesk Dashboard"
+msgid "Customer Issue  Dashboard"
 msgstr ""
 
 #: templates/helpdesk/dashboard.html:9
@@ -1198,10 +1198,13 @@ msgid ""
 "Welcome to your Helpdesk Dashboard! From here you can quickly see tickets "
 "submitted by you, tickets you are working on, and those tickets that have no "
 "owner."
-msgstr ""
+msgstr "" 
+"Welcome to Patriot Electric's Ticket Dashboard!  From here you can quickly see tickets "
+"submitted by you, tickets you are working on, and those tickets that have no "
+"owner."
 
 #: templates/helpdesk/dashboard.html:14
-msgid "Helpdesk Summary"
+msgid "Customer Issues Summary"
 msgstr ""
 
 #: templates/helpdesk/dashboard.html:36
@@ -1604,7 +1607,7 @@ msgstr ""
 #: templates/helpdesk/public_view_ticket.html:9
 #, python-format
 msgid "Queue: %(queue_name)s"
-msgstr "Type:"
+msgstr "Type: %(queue_name)s"
 
 #: templates/helpdesk/public_view_ticket.html:13
 #: templates/helpdesk/ticket_desc_table.html:32

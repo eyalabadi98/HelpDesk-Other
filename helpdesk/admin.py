@@ -11,15 +11,14 @@ class QueueAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'email_address')
     prepopulated_fields = {"slug": ("title",)}
     print("Printing Queue")
-    logger.debugger("Queue")
 
 
 @admin.register(Ticket)
 class TicketAdmin(admin.ModelAdmin):
-    list_display = ('title', 'status', 'assigned_to','title',)
+    list_display = ('title', 'status', 'assigned_to')
     date_hierarchy = 'created'
     print("Ticket Admin")
-    exclude = ('submitter_email')
+    exclude = ('submitter_email',)
     list_filter = ('assigned_to', 'title')
 
     def hidden_submitter_email(self, ticket):

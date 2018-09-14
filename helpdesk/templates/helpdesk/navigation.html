@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{% url 'helpdesk:home' %}">{% trans 'Helpdesk' %}Ticket </a>
+                <a class="navbar-brand" href="{% url 'helpdesk:home' %}">{% trans 'Patriot Electric - Customer Issues' %}</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -28,6 +28,9 @@
                 <li>
                     <a href='{% url 'helpdesk:report_index' %}'><i class="fa fa-bar-chart-o fa-fw"></i> <span class="nav-text"> {% trans "Stats" %}</span></a>
                 </li>
+		<li>
+	      	    <a href='{% url 'home'  %}'><i class="fa fas fa-home fa-fw"></i> <span class="nav-text"> {% trans "Home" %}</span></li>
+		</li>
                 {% if helpdesk_settings.HELPDESK_KB_ENABLED %}
                 <li>
                     <a href='{% url 'helpdesk:kb_index' %}'><i class="fa fa-database fa-fw"></i> <span class="nav-text">{% trans "Knowledgebase" %}</span></a>

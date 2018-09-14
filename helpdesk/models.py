@@ -393,11 +393,11 @@ class Ticket(models.Model):
         max_length=200,
     )
 
-    #queue = models.ForeignKey(
-       # Queue,
-      #  on_delete=models.CASCADE,
-     #   verbose_name=_('Queue'),
-    #)
+    queue = models.ForeignKey(
+        Queue,
+        on_delete=models.CASCADE,
+        verbose_name=_('Queue'),
+    )
 
     created = models.DateTimeField(
         _('Created'),
